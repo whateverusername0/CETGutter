@@ -78,7 +78,7 @@ namespace CETGutter
                 var asText = Encoding.UTF8.GetString(decompressedData);
 
                 // ignores everything before '<' (as in "<?xml") and processes it like that
-                var @return = asText[(asText.IndexOf('<') - 1)..];
+                var @return = asText[asText.IndexOf('<')..];
 
                 File.WriteAllText(xmlFilePath, @return);
 
